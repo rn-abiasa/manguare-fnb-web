@@ -240,7 +240,7 @@ body {
 }
 
 .splash-logo {
-  font-family: var(--font-krona-one);
+  font-family: var(--font-serif);
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 400;
   color: var(--background);

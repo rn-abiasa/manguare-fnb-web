@@ -18,15 +18,16 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-export default function MobileMenu() {
+export default function MobileMenu({ theme = "dark" }: { theme?: "light" | "dark" }) {
   const [open, setOpen] = useState(false);
+  const isLight = theme === "light";
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <button
           aria-label="Open navigation menu"
-          className="text-white focus:outline-none"
+          className={`focus:outline-none ${isLight ? "text-foreground" : "text-white"}`}
         >
           <Menu className="w-6 h-6" />
         </button>

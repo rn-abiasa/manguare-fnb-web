@@ -13,11 +13,11 @@ export default function AboutPage() {
   return (
     <>
       <header>
-        <Navbar />
+        <Navbar theme="light" />
       </header>
       <main className="min-h-screen">
         {/* Hero area */}
-        <section className="pt-36 pb-20 px-8 max-w-screen-lg mx-auto">
+        <section className="pt-36 pb-20 px-8 md:px-16 lg:px-24">
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest hover:text-foreground transition-colors mb-16"
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </section>
 
         {/* Values strip */}
-        <section className="border-t border-border px-8 py-16 max-w-screen-lg mx-auto">
+        <section className="border-t border-border px-8 md:px-16 lg:px-24 py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               { title: "Woodfired", desc: "Every dish cooked over open hardwood flame — no gas, no shortcuts." },

@@ -31,7 +31,7 @@ export default function SplashScreen() {
         transition: "opacity 0.7s ease",
       }}
     >
-      <span className="splash-logo">Braga Eats</span>
+      <span className="splash-logo font-serif">Braga Eats</span>
     </div>
   );
 }

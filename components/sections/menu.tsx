@@ -11,9 +11,9 @@ const menuItems = [
 
 export default function Menu() {
   return (
-    <section id="menu" className="px-8 py-24 md:py-32 bg-muted/30">
+    <section id="menu" className="px-8 md:px-16 lg:px-24 py-24 md:py-32 bg-muted/30">
       {/* Header */}
-      <div className="max-w-screen-lg mx-auto mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <p className="text-xs text-muted-foreground uppercase tracking-widest mb-4">
             Our Menu
@@ -30,7 +30,7 @@ export default function Menu() {
       </div>
 
       {/* Photo grid */}
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
         {menuItems.map((item) => (
           <div key={item.label} className="flex flex-col gap-2">
             <div className="relative aspect-4/5 w-full overflow-hidden rounded-sm">

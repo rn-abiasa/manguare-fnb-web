@@ -19,10 +19,10 @@ export default function ContactPage() {
   return (
     <>
       <header>
-        <Navbar />
+        <Navbar theme="light" />
       </header>
       <main className="min-h-screen">
-        <section className="pt-36 pb-20 px-8 max-w-screen-lg mx-auto">
+        <section className="pt-36 pb-20 px-8 md:px-16 lg:px-24">
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest hover:text-foreground transition-colors mb-16"
