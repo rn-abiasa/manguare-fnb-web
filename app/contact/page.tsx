@@ -37,21 +37,37 @@ export default function ContactPage() {
               <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">
                 Contact
               </p>
-              <h1 className="text-5xl md:text-6xl font-display font-normal leading-tight tracking-tight mb-10">
-                Come find<br />us.
+              <h1 className="text-5xl md:text-6xl font-display font-normal text-primary leading-tight tracking-tight mb-10">
+                Come find
+                <br />
+                us.
               </h1>
 
               <div className="flex flex-col gap-8 text-sm text-muted-foreground">
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-foreground mb-2">Address</p>
-                  <p>Jl. Braga, Bandung,<br />West Java 40111, Indonesia</p>
+                  <p className="text-xs uppercase tracking-widest text-foreground mb-2">
+                    Address
+                  </p>
+                  <p>
+                    Jl. Braga, Bandung,
+                    <br />
+                    West Java 40111, Indonesia
+                  </p>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-foreground mb-2">Hours</p>
-                  <p>Monday – Sunday<br />11:00 AM – 10:00 PM</p>
+                  <p className="text-xs uppercase tracking-widest text-foreground mb-2">
+                    Hours
+                  </p>
+                  <p>
+                    Monday – Sunday
+                    <br />
+                    11:00 AM – 10:00 PM
+                  </p>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-foreground mb-2">Reservations</p>
+                  <p className="text-xs uppercase tracking-widest text-foreground mb-2">
+                    Reservations
+                  </p>
                   <a
                     href="tel:+62221234567"
                     className="hover:text-foreground transition-colors"
@@ -66,13 +82,20 @@ export default function ContactPage() {
             <div>
               {status === "sent" ? (
                 <div className="py-12">
-                  <p className="text-2xl font-display font-normal">Thank you.</p>
-                  <p className="text-muted-foreground mt-2 text-sm">We'll be in touch soon.</p>
+                  <p className="text-2xl font-display font-normal">
+                    Thank you.
+                  </p>
+                  <p className="text-muted-foreground mt-2 text-sm">
+                    We'll be in touch soon.
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-xs uppercase tracking-widest text-muted-foreground">
+                    <label
+                      htmlFor="name"
+                      className="text-xs uppercase tracking-widest text-muted-foreground"
+                    >
                       Name
                     </label>
                     <input
@@ -85,7 +108,10 @@ export default function ContactPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-xs uppercase tracking-widest text-muted-foreground">
+                    <label
+                      htmlFor="email"
+                      className="text-xs uppercase tracking-widest text-muted-foreground"
+                    >
                       Email
                     </label>
                     <input
@@ -98,7 +124,10 @@ export default function ContactPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="text-xs uppercase tracking-widest text-muted-foreground">
+                    <label
+                      htmlFor="message"
+                      className="text-xs uppercase tracking-widest text-muted-foreground"
+                    >
                       Message
                     </label>
                     <textarea
@@ -112,8 +141,9 @@ export default function ContactPage() {
                   </div>
                   <div className="pt-2">
                     <Button
+                      variant="outline"
                       type="submit"
-                      className="rounded-full px-8 bg-foreground text-background hover:bg-foreground/80"
+                      className="rounded-full px-8 border border-primary text-primary hover:bg-primary hover:text-background"
                     >
                       Send Message
                     </Button>

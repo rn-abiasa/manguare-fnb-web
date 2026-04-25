@@ -11,14 +11,17 @@ const menuItems = [
 
 export default function Menu() {
   return (
-    <section id="menu" className="px-8 md:px-16 lg:px-24 py-24 md:py-32 bg-muted/30">
+    <section
+      id="menu"
+      className="px-8 md:px-16 lg:px-24 py-24 md:py-32 bg-muted/30"
+    >
       {/* Header */}
       <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <p className="text-xs text-muted-foreground uppercase tracking-widest mb-4">
             Our Menu
           </p>
-          <h2 className="text-4xl md:text-5xl font-display font-normal leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-normal text-primary leading-tight tracking-tight">
             From the fire,
             <br />
             to your hands.

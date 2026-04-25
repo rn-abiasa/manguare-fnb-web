@@ -47,7 +47,7 @@ function Navbar({ theme = "dark" }: NavbarProps) {
                   key={link.label}
                   href={link.url}
                   className={`text-base font-medium hover:opacity-70 transition-opacity ${
-                    isLight ? "text-foreground" : "text-background"
+                    isLight ? "text-primary" : "text-background"
                   }`}
                 >
                   {link.label}
@@ -62,7 +62,7 @@ function Navbar({ theme = "dark" }: NavbarProps) {
           <Link
             href="/"
             className={`text-2xl md:text-2xl font-serif font-bold tracking-tight ${
-              isLight ? "text-foreground" : "text-white"
+              isLight ? "text-primary" : "text-white"
             }`}
           >
             Braga Eats
@@ -75,7 +75,7 @@ function Navbar({ theme = "dark" }: NavbarProps) {
             variant="outline"
             className={`rounded-full hidden md:flex transition-colors ${
               isLight
-                ? "border-foreground text-foreground hover:bg-foreground hover:text-background"
+                ? "border-primary text-primary hover:bg-primary hover:text-background"
                 : "border-white text-black hover:bg-black hover:text-white"
             }`}
           >

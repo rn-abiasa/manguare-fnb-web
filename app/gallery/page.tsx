@@ -43,7 +43,7 @@ export default function GalleryPage() {
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">
               Gallery
             </p>
-            <h1 className="text-5xl md:text-6xl font-display font-normal leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-display font-normal text-primary leading-tight tracking-tight">
               Fire, food,
               <br />
               and people.
