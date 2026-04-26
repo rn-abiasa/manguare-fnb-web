@@ -69,7 +69,7 @@ function Navbar({ theme = "dark" }: NavbarProps) {
         <div className="flex justify-end items-center gap-5">
           <a
             href="/menu"
-            className={`text-base font-medium hover:opacity-70 transition-opacity ${
+            className={`hidden md:flex text-base font-medium hover:opacity-70 transition-opacity ${
               isLight ? "text-primary" : "text-background"
             }`}
           >

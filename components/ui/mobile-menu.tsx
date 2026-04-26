@@ -18,7 +18,11 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-export default function MobileMenu({ theme = "dark" }: { theme?: "light" | "dark" }) {
+export default function MobileMenu({
+  theme = "dark",
+}: {
+  theme?: "light" | "dark";
+}) {
   const [open, setOpen] = useState(false);
   const isLight = theme === "light";
 
@@ -38,8 +42,8 @@ export default function MobileMenu({ theme = "dark" }: { theme?: "light" | "dark
       >
         {/* Header */}
         <div className="flex items-center justify-between px-8 py-10">
-          <span className="font-display text-2xl font-bold text-primary tracking-tight">
-            Kembang
+          <span className="font-serif text-2xl font-bold text-primary tracking-tight">
+            Braga Eats
           </span>
           <SheetClose asChild>
             <button
@@ -57,7 +61,7 @@ export default function MobileMenu({ theme = "dark" }: { theme?: "light" | "dark
             <SheetClose asChild key={link.href}>
               <Link
                 href={link.href}
-                className="text-4xl font-sans font-normal text-primary transition-colors py-2 leading-tight"
+                className="text-3xl font-sans font-normal text-primary transition-colors py-2 leading-tight"
               >
                 {link.label}
               </Link>
