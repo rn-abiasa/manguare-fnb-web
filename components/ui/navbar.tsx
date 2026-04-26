@@ -8,10 +8,6 @@ const links = [
     url: "/",
   },
   {
-    label: "MENU",
-    url: "/#menu",
-  },
-  {
     label: "ABOUT",
     url: "/about",
   },
@@ -70,7 +66,16 @@ function Navbar({ theme = "dark" }: NavbarProps) {
         </div>
 
         {/* Right: Action */}
-        <div className="flex justify-end">
+        <div className="flex justify-end items-center gap-5">
+          <a
+            href="/menu"
+            className={`text-base font-medium hover:opacity-70 transition-opacity ${
+              isLight ? "text-primary" : "text-background"
+            }`}
+          >
+            MENU
+          </a>
+
           <Button
             variant="outline"
             className={`rounded-full hidden md:flex transition-colors ${
