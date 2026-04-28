@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 /* ─── Data ─────────────────────────────────────────────────── */
@@ -32,31 +33,85 @@ const menuData: MenuTab[] = [
         id: "small",
         label: "Small Bites",
         items: [
-          { no: "F01", name: "Cilok Pasundan", ingredients: "Tapioka, bumbu kacang, kecap manis" },
-          { no: "F02", name: "Batagor Braga", ingredients: "Ikan tenggiri, tahu, saus kacang pedas" },
-          { no: "F03", name: "Siomay Bandung", ingredients: "Udang, sayuran, saus kacang" },
-          { no: "F04", name: "Tahu Gejrot", ingredients: "Tahu goreng, cuka, bawang, cabai rawit" },
-          { no: "F05", name: "Seblak Mini", ingredients: "Kerupuk basah, telur, kencur, cabai" },
+          {
+            no: "F01",
+            name: "Cilok Pasundan",
+            ingredients: "Tapioka, bumbu kacang, kecap manis",
+          },
+          {
+            no: "F02",
+            name: "Batagor Braga",
+            ingredients: "Ikan tenggiri, tahu, saus kacang pedas",
+          },
+          {
+            no: "F03",
+            name: "Siomay Bandung",
+            ingredients: "Udang, sayuran, saus kacang",
+          },
+          {
+            no: "F04",
+            name: "Tahu Gejrot",
+            ingredients: "Tahu goreng, cuka, bawang, cabai rawit",
+          },
+          {
+            no: "F05",
+            name: "Seblak Mini",
+            ingredients: "Kerupuk basah, telur, kencur, cabai",
+          },
         ],
       },
       {
         id: "big",
         label: "Big Plates",
         items: [
-          { no: "F06", name: "Mie Braga", ingredients: "Mie telur, ayam suwir, kaldu sapi, caisim" },
-          { no: "F07", name: "Baso Firepot", ingredients: "Bakso daging sapi, soun, tahu, sumsum" },
-          { no: "F08", name: "Sate Woodfired", ingredients: "Daging sapi pilihan, sambal kacang, lontong" },
-          { no: "F09", name: "Nasi Liwet Sundanese", ingredients: "Nasi santan, ikan asin, sambal, lalapan" },
-          { no: "F10", name: "Grilled Peuyeum", ingredients: "Peuyeum bakar, kelapa parut, gula merah" },
+          {
+            no: "F06",
+            name: "Mie Braga",
+            ingredients: "Mie telur, ayam suwir, kaldu sapi, caisim",
+          },
+          {
+            no: "F07",
+            name: "Baso Firepot",
+            ingredients: "Bakso daging sapi, soun, tahu, sumsum",
+          },
+          {
+            no: "F08",
+            name: "Sate Woodfired",
+            ingredients: "Daging sapi pilihan, sambal kacang, lontong",
+          },
+          {
+            no: "F09",
+            name: "Nasi Liwet Sundanese",
+            ingredients: "Nasi santan, ikan asin, sambal, lalapan",
+          },
+          {
+            no: "F10",
+            name: "Grilled Peuyeum",
+            ingredients: "Peuyeum bakar, kelapa parut, gula merah",
+          },
         ],
       },
       {
         id: "family",
         label: "Family Sets",
         items: [
-          { no: "F11", name: "Paket Nasi Tradisional", ingredients: "Nasi putih, 3 lauk pilihan, sambal, kerupuk — untuk 4 orang" },
-          { no: "F12", name: "Paket Woodfired", ingredients: "Sate sapi, mie braga, baso, minuman — untuk 4 orang" },
-          { no: "F13", name: "Paket Heritage", ingredients: "Nasi liwet, ayam bakar, lalapan, sambal terasi — untuk 6 orang" },
+          {
+            no: "F11",
+            name: "Paket Nasi Tradisional",
+            ingredients:
+              "Nasi putih, 3 lauk pilihan, sambal, kerupuk — untuk 4 orang",
+          },
+          {
+            no: "F12",
+            name: "Paket Woodfired",
+            ingredients: "Sate sapi, mie braga, baso, minuman — untuk 4 orang",
+          },
+          {
+            no: "F13",
+            name: "Paket Heritage",
+            ingredients:
+              "Nasi liwet, ayam bakar, lalapan, sambal terasi — untuk 6 orang",
+          },
         ],
       },
     ],
@@ -69,28 +124,68 @@ const menuData: MenuTab[] = [
         id: "cold",
         label: "Cold Drinks",
         items: [
-          { no: "D01", name: "Es Jeruk Peras", ingredients: "Jeruk Garut segar, gula aren, es batu" },
-          { no: "D02", name: "Es Teh Braga", ingredients: "Teh hijau, sirop gula, lemon, es batu" },
-          { no: "D03", name: "Es Cincau Hitam", ingredients: "Cincau hitam, santan, gula merah, es batu" },
-          { no: "D04", name: "Es Kelapa Muda", ingredients: "Kelapa segar, sirop pandan, nata de coco" },
+          {
+            no: "D01",
+            name: "Es Jeruk Peras",
+            ingredients: "Jeruk Garut segar, gula aren, es batu",
+          },
+          {
+            no: "D02",
+            name: "Es Teh Braga",
+            ingredients: "Teh hijau, sirop gula, lemon, es batu",
+          },
+          {
+            no: "D03",
+            name: "Es Cincau Hitam",
+            ingredients: "Cincau hitam, santan, gula merah, es batu",
+          },
+          {
+            no: "D04",
+            name: "Es Kelapa Muda",
+            ingredients: "Kelapa segar, sirop pandan, nata de coco",
+          },
         ],
       },
       {
         id: "hot",
         label: "Hot Drinks",
         items: [
-          { no: "D05", name: "Teh Panas Wangi", ingredients: "Teh wangi pilihan, gula batu" },
-          { no: "D06", name: "Jahe Susu", ingredients: "Jahe merah, susu segar, gula aren" },
-          { no: "D07", name: "Kopi Bandung", ingredients: "Kopi robusta lokal, susu, gula merah" },
+          {
+            no: "D05",
+            name: "Teh Panas Wangi",
+            ingredients: "Teh wangi pilihan, gula batu",
+          },
+          {
+            no: "D06",
+            name: "Jahe Susu",
+            ingredients: "Jahe merah, susu segar, gula aren",
+          },
+          {
+            no: "D07",
+            name: "Kopi Bandung",
+            ingredients: "Kopi robusta lokal, susu, gula merah",
+          },
         ],
       },
       {
         id: "special",
         label: "Specials",
         items: [
-          { no: "D08", name: "Bandrek Tradisional", ingredients: "Jahe, kayu manis, cengkeh, serai, gula aren" },
-          { no: "D09", name: "Bajigur Braga", ingredients: "Santan, gula aren, jahe, kopi hitam" },
-          { no: "D10", name: "Wedang Uwuh", ingredients: "Rempah kayu secang, cengkeh, jahe, gula batu" },
+          {
+            no: "D08",
+            name: "Bandrek Tradisional",
+            ingredients: "Jahe, kayu manis, cengkeh, serai, gula aren",
+          },
+          {
+            no: "D09",
+            name: "Bajigur Braga",
+            ingredients: "Santan, gula aren, jahe, kopi hitam",
+          },
+          {
+            no: "D10",
+            name: "Wedang Uwuh",
+            ingredients: "Rempah kayu secang, cengkeh, jahe, gula batu",
+          },
         ],
       },
     ],
@@ -103,19 +198,47 @@ const menuData: MenuTab[] = [
         id: "sweet",
         label: "Sweet Bites",
         items: [
-          { no: "S01", name: "Cendol Braga", ingredients: "Tepung beras hijau, santan, gula merah cair, es batu" },
-          { no: "S02", name: "Klepon Pandan", ingredients: "Tepung ketan, gula merah, kelapa parut, daun pandan" },
-          { no: "S03", name: "Bubur Sumsum", ingredients: "Tepung beras, santan kental, gula merah" },
+          {
+            no: "S01",
+            name: "Cendol Braga",
+            ingredients: "Tepung beras hijau, santan, gula merah cair, es batu",
+          },
+          {
+            no: "S02",
+            name: "Klepon Pandan",
+            ingredients: "Tepung ketan, gula merah, kelapa parut, daun pandan",
+          },
+          {
+            no: "S03",
+            name: "Bubur Sumsum",
+            ingredients: "Tepung beras, santan kental, gula merah",
+          },
         ],
       },
       {
         id: "traditional",
         label: "Traditional",
         items: [
-          { no: "S04", name: "Surabi Oncom", ingredients: "Tepung beras, oncom, santan, daun pandan" },
-          { no: "S05", name: "Kue Putu Bambu", ingredients: "Tepung beras, gula merah, kelapa parut, daun pandan" },
-          { no: "S06", name: "Awug Sunda", ingredients: "Tepung beras, gula merah, kelapa, pandan" },
-          { no: "S07", name: "Wajit Cililin", ingredients: "Ketan, gula merah, santan, daun pandan" },
+          {
+            no: "S04",
+            name: "Surabi Oncom",
+            ingredients: "Tepung beras, oncom, santan, daun pandan",
+          },
+          {
+            no: "S05",
+            name: "Kue Putu Bambu",
+            ingredients: "Tepung beras, gula merah, kelapa parut, daun pandan",
+          },
+          {
+            no: "S06",
+            name: "Awug Sunda",
+            ingredients: "Tepung beras, gula merah, kelapa, pandan",
+          },
+          {
+            no: "S07",
+            name: "Wajit Cililin",
+            ingredients: "Ketan, gula merah, santan, daun pandan",
+          },
         ],
       },
     ],
@@ -203,10 +326,11 @@ function MobileAccordion({ categories }: { categories: Category[] }) {
 function DesktopCategoryLayout({ categories }: { categories: Category[] }) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id ?? "");
 
-  const current = categories.find((c) => c.id === activeCategory) ?? categories[0];
+  const current =
+    categories.find((c) => c.id === activeCategory) ?? categories[0];
 
   return (
-    <div className="grid grid-cols-[200px_1fr] gap-12 xl:gap-20 items-start">
+    <div className="grid grid-cols-[240px_1fr] gap-16 xl:gap-28 items-start">
       {/* Left: category list */}
       <nav className="flex flex-col gap-1 sticky top-32">
         {categories.map((cat) => {
@@ -244,6 +368,36 @@ function DesktopCategoryLayout({ categories }: { categories: Category[] }) {
   );
 }
 
+/* ─── Photo Marquee ─────────────────────────────────────────── */
+
+const marqueeImages = [
+  { src: "/mie.jpg", alt: "Mie Braga" },
+  { src: "/cilok.jpg", alt: "Cilok Pasundan" },
+  { src: "/baso.jpg", alt: "Baso Firepot" },
+  { src: "/sate.jpg", alt: "Sate Woodfired" },
+  { src: "/chef.jpg", alt: "Our Chef" },
+  { src: "/street.jpg", alt: "Braga Street" },
+];
+
+function PhotoMarquee() {
+  // Duplicate for seamless loop
+  const items = [...marqueeImages, ...marqueeImages];
+  return (
+    <div className="relative -mx-8 md:-mx-16 lg:-mx-24 mb-16 overflow-hidden h-52 md:h-72">
+      <div className="animate-marquee-loop h-full flex gap-3 md:gap-4">
+        {items.map((img, i) => (
+          <div
+            key={i}
+            className="relative h-full w-64 md:w-80 shrink-0 overflow-hidden"
+          >
+            <Image src={img.src} alt={img.alt} fill className="object-cover" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ─── Main Component ────────────────────────────────────────── */
 
 export default function MenuContent() {
@@ -259,13 +413,15 @@ export default function MenuContent() {
       </p>
 
       {/* Headline */}
-      <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal text-primary leading-tight tracking-tight mb-16">
+      <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-normal text-primary leading-none tracking-tighter mb-16">
         What we serve,
         <br />
         with fire &amp; soul.
       </h1>
 
-      {/* Main tabs: Food / Drink / Dessert */}
+      {/* Photo Marquee */}
+      <PhotoMarquee />
+
       <div className="flex gap-0 border-b border-border mb-12 md:mb-16">
         {menuData.map((tab) => {
           const isActive = tab.id === activeTab;

@@ -21,7 +21,7 @@ export default function Menu() {
           <p className="text-xs text-muted-foreground uppercase tracking-widest mb-4">
             Our Menu
           </p>
-          <h2 className="text-4xl md:text-5xl font-display font-normal text-primary leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-normal text-primary leading-none tracking-tighter">
             From the fire,
             <br />
             to your hands.
@@ -33,7 +33,7 @@ export default function Menu() {
       </div>
 
       {/* Photo grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
         {menuItems.map((item) => (
           <div key={item.label} className="flex flex-col gap-2">
             <div className="relative aspect-4/5 w-full overflow-hidden rounded-sm">

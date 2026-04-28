@@ -11,7 +11,7 @@ export default function About() {
       {/* Editorial layout: large headline + body text */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
         <div>
-          <h2 className="text-4xl md:text-5xl font-display font-normal text-primary leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-normal text-primary leading-none tracking-tighter">
             Centuries of Sundanese tradition, reborn on the streets of Bandung.
           </h2>
         </div>

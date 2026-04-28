@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Krona_One } from "next/font/google";
+import { Manrope, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -7,9 +7,10 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const kronaOne = Krona_One({
-  weight: "400",
-  variable: "--font-krona-one",
+const cormorantGaramond = Cormorant_Garamond({
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   subsets: ["latin"],
 });
 
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${kronaOne.variable} smooth-scroll h-full antialiased`}
+      className={`${manrope.variable} ${cormorantGaramond.variable} smooth-scroll h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

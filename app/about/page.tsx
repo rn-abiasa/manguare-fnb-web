@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/sections/footer";
 
@@ -19,20 +17,12 @@ export default function AboutPage() {
       <main className="min-h-screen">
         {/* Hero area */}
         <section className="pt-36 pb-20 px-8 md:px-16 lg:px-24">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest hover:text-foreground transition-colors mb-16"
-          >
-            <ArrowLeft className="w-3 h-3" />
-            Back
-          </Link>
-
           {/* Large editorial headline */}
           <div className="mb-20">
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">
               Our Story
             </p>
-            <h1 className="text-5xl md:text-7xl font-display font-normal text-primary leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-normal text-primary leading-none tracking-tighter">
               Born in Braga.
               <br />
               Made in Bandung.
