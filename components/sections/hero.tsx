@@ -25,7 +25,7 @@ function Hero() {
         </div>
         <div
           id="marquee"
-          className="absolute bottom-0 left-0 bg-background w-full py-6 overflow-hidden border-y border-primary/10"
+          className="absolute bottom-0 left-0 bg-background w-full py-4 overflow-hidden border-y border-primary/10"
         >
           <div className="animate-marquee-loop whitespace-nowrap flex">
             {/* Group 1 */}

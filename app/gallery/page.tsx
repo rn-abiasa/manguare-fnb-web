@@ -31,14 +31,6 @@ export default function GalleryPage() {
       </header>
       <main className="min-h-screen">
         <section className="pt-36 pb-20 px-8 md:px-16 lg:px-24">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest hover:text-foreground transition-colors mb-16"
-          >
-            <ArrowLeft className="w-3 h-3" />
-            Back
-          </Link>
-
           <div className="mb-16">
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">
               Gallery
