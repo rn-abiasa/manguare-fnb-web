@@ -31,7 +31,7 @@ export default function MobileMenu({
       <SheetTrigger asChild>
         <button
           aria-label="Open navigation menu"
-          className={`focus:outline-none ${isLight ? "text-foreground" : "text-white"}`}
+          className={`focus:outline-none ${isLight ? "text-primary" : "text-white"}`}
         >
           <Menu className="w-6 h-6" />
         </button>
