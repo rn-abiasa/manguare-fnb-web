@@ -14,8 +14,8 @@ function Hero() {
             Woodfired
           </h1>
           <p className="text-sm md:text-base lg:text-lg font-medium text-white/80 mt-5 max-w-sm leading-relaxed text-center">
-            BANDUNG HERITAGE FLAVORS WOODFIRED AND UNFORGETTABLE — BRINGING
-            CENTURIES OLD RECIPES TO THE MODERN STREET
+            BANDUNG HERITAGE FLAVORS WOODFIRED AND UNFORGETTABLE — REBORN ON THE
+            STREETS OF BANDUNG
           </p>
           <div className="mt-10">
             <Button className="bg-background rounded-full text-black">
